@@ -117,7 +117,99 @@
     #himno-container {
       margin: 20px 0;
       text-align: center;
- 
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>COBACH 20 - Proyecto de Alimentación Sustentable</h1>
+
+    <!-- Reproductor de audio para el himno -->
+    <div id="himno-container">
+      <h2>Himno del Colegio de Bachilleres</h2>
+      <audio controls>
+        <source src="himno-colegio-bachilleres.mp3" type="audio/mpeg" />
+        Tu navegador no soporta el elemento de audio.
+      </audio>
+    </div>
+
+    <!-- Botones para mostrar secciones dinámicas -->
+    <div>
+      <button class="paw-button" data-info="recetas">Recetas Saludables</button>
+      <button class="paw-button" data-info="impacto">Importancia e Impacto</button>
+      <button class="paw-button" data-info="opciones">Opciones de Cambio</button>
+    </div>
+
+    <!-- Contenedor donde se muestran las secciones dinámicas -->
+    <div id="infoDisplay">
+      <p>Haz clic en alguno de los botones para ver más información.</p>
+    </div>
+
+    <!-- Galería de imágenes saludables -->
+    <div class="image-gallery">
+      <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=150&q=80" alt="Frutas frescas" title="Frutas frescas" />
+      <img src="https://images.unsplash.com/photo-1506801310323-534be5e7bb88?auto=format&fit=crop&w=150&q=80" alt="Ensalada saludable" title="Ensalada saludable" />
+      <img src="https://images.unsplash.com/photo-1542831371-d531d36971e6?auto=format&fit=crop&w=150&q=80" alt="Verduras variadas" title="Verduras variadas" />
+      <img src="https://images.unsplash.com/photo-1572441710556-4e03b6f6b69e?auto=format&fit=crop&w=150&q=80" alt="Batido saludable" title="Batido saludable" />
+      <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=150&q=80" alt="Snacks naturales" title="Snacks naturales" />
+      <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=150&q=80" alt="Frutas en bol" title="Frutas en bol" />
+    </div>
+
+    <!-- Secciones fijas informativas -->
+    <section class="content-section">
+      <h2>Reducción de Basura en el Plantel</h2>
+      <p>En el Plantel 20 estamos comprometidos con la disminución de residuos sólidos:</p>
+      <ul>
+        <li>Implementación de estaciones de separación de residuos.</li>
+        <li>Promoción del uso de loncheras y botellas reutilizables.</li>
+        <li>Eliminación gradual del uso de plásticos de un solo uso.</li>
+        <li>Campañas para reducir envolturas de comida chatarra.</li>
+        <li>Educación ambiental para toda la comunidad escolar.</li>
+      </ul>
+      <p>Reducir la basura es responsabilidad de todos. ¡Súmate al cambio!</p>
+    </section>
+
+    <section class="content-section">
+      <h2>Alimentación Responsable en el COBACH 20</h2>
+      <p>Una buena alimentación es clave para nuestra salud y el bienestar del planeta:</p>
+      <ul>
+        <li>Incentivamos el consumo de frutas, verduras y alimentos naturales.</li>
+        <li>Recomendamos traer almuerzos preparados en casa sin empaques desechables.</li>
+        <li>Disponemos de opciones saludables en la cafetería escolar.</li>
+        <li>Realizamos campañas para reducir el consumo de refrescos y frituras.</li>
+        <li>Promovemos el cultivo de alimentos en huertos escolares.</li>
+      </ul>
+      <p>¡Comer bien también es cuidar el medio ambiente!</p>
+    </section>
+
+    <section class="content-section">
+      <h2>Comparte tus Ideas para una Alimentación Sustentable</h2>
+      <p>¿Cómo crees que podemos comer mejor y generar menos basura en el COBACH 20?</p>
+      <p>Llena el formulario de abajo con tus propuestas. Juntos construiremos un plantel más sano y sostenible.</p>
+    </section>
+
+    <!-- Formulario -->
+    <section id="feedback-form" class="content-section">
+      <h2>Formulario de Propuestas</h2>
+      <form id="feedbackForm">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required />
+
+        <label for="propuesta">Propuesta / Comentario:</label>
+        <textarea id="propuesta" rows="5" required></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 COBACH 20 - Proyecto de Alimentación Sustentable</p>
+  </footer>
+
   <script>
     // Obtener los botones y el contenedor para mostrar info
     const pawButtons = document.querySelectorAll('.paw-button');
