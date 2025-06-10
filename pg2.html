@@ -1,0 +1,289 @@
+
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>COBACH 20 - Alimentación Sustentable</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      line-height: 1.6;
+      background: #ffe6f0; /* rosa claro */
+      color: #b30059; /* rosa fuerte */
+    }
+    h1, h2, h3 {
+      color: #b30059;
+    }
+    ul {
+      margin-left: 20px;
+    }
+    button.paw-button {
+      background-color: #e60073; /* rosa fuerte */
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      margin-right: 10px;
+      margin-bottom: 15px;
+      cursor: pointer;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+    button.paw-button:hover {
+      background-color: #99004d;
+    }
+    .hidden {
+      display: none;
+    }
+    #infoDisplay {
+      margin-top: 20px;
+      padding: 15px;
+      border: 2px solid #e60073;
+      background: #ffe6f0;
+      border-radius: 8px;
+      min-height: 150px;
+    }
+    section.content-section {
+      margin-bottom: 30px;
+      background: white;
+      padding: 15px 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 8px #f7c2da;
+    }
+    form {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 8px #f7c2da;
+      max-width: 500px;
+    }
+    label {
+      margin-top: 15px;
+      display: block;
+      font-weight: bold;
+      color: #b30059;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #f7c2da;
+      border-radius: 5px;
+      resize: vertical;
+      font-family: inherit;
+    }
+    button[type="submit"] {
+      background-color: #b30059;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      margin-top: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    button[type="submit"]:hover {
+      background-color: #80003b;
+    }
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      color: #80003b;
+      font-size: 0.9em;
+    }
+    /* Contenedor de imágenes */
+    .image-gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+      margin: 30px 0;
+    }
+    .image-gallery img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(179, 0, 89, 0.3);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    .image-gallery img:hover {
+      transform: scale(1.05);
+    }
+    /* Audio player */
+    #himno-container {
+      margin: 20px 0;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>COBACH 20 - Proyecto de Alimentación Sustentable</h1>
+
+    <!-- Reproductor de audio para el himno -->
+    <div id="himno-container">
+      <h2>Himno del Colegio de Bachilleres</h2>
+      <audio controls>
+        <source src="himno-colegio-bachilleres.mp3" type="audio/mpeg" />
+        Tu navegador no soporta el elemento de audio.
+      </audio>
+    </div>
+
+    <!-- Botones para mostrar secciones dinámicas -->
+    <div>
+      <button class="paw-button" data-info="recetas">Recetas Saludables</button>
+      <button class="paw-button" data-info="impacto">Importancia e Impacto</button>
+      <button class="paw-button" data-info="opciones">Opciones de Cambio</button>
+    </div>
+
+    <!-- Contenedor donde se muestran las secciones dinámicas -->
+    <div id="infoDisplay">
+      <p>Haz clic en alguno de los botones para ver más información.</p>
+    </div>
+
+    <!-- Galería de imágenes saludables -->
+    <div class="image-gallery">
+      <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=150&q=80" alt="Frutas frescas" title="Frutas frescas" />
+      <img src="https://images.unsplash.com/photo-1506801310323-534be5e7bb88?auto=format&fit=crop&w=150&q=80" alt="Ensalada saludable" title="Ensalada saludable" />
+      <img src="https://images.unsplash.com/photo-1542831371-d531d36971e6?auto=format&fit=crop&w=150&q=80" alt="Verduras variadas" title="Verduras variadas" />
+      <img src="https://images.unsplash.com/photo-1572441710556-4e03b6f6b69e?auto=format&fit=crop&w=150&q=80" alt="Batido saludable" title="Batido saludable" />
+      <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=150&q=80" alt="Snacks naturales" title="Snacks naturales" />
+      <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=150&q=80" alt="Frutas en bol" title="Frutas en bol" />
+    </div>
+
+    <!-- Secciones fijas informativas -->
+    <section class="content-section">
+      <h2>Reducción de Basura en el Plantel</h2>
+      <p>En el Plantel 20 estamos comprometidos con la disminución de residuos sólidos:</p>
+      <ul>
+        <li>Implementación de estaciones de separación de residuos.</li>
+        <li>Promoción del uso de loncheras y botellas reutilizables.</li>
+        <li>Eliminación gradual del uso de plásticos de un solo uso.</li>
+        <li>Campañas para reducir envolturas de comida chatarra.</li>
+        <li>Educación ambiental para toda la comunidad escolar.</li>
+      </ul>
+      <p>Reducir la basura es responsabilidad de todos. ¡Súmate al cambio!</p>
+    </section>
+
+    <section class="content-section">
+      <h2>Alimentación Responsable en el COBACH 20</h2>
+      <p>Una buena alimentación es clave para nuestra salud y el bienestar del planeta:</p>
+      <ul>
+        <li>Incentivamos el consumo de frutas, verduras y alimentos naturales.</li>
+        <li>Recomendamos traer almuerzos preparados en casa sin empaques desechables.</li>
+        <li>Disponemos de opciones saludables en la cafetería escolar.</li>
+        <li>Realizamos campañas para reducir el consumo de refrescos y frituras.</li>
+        <li>Promovemos el cultivo de alimentos en huertos escolares.</li>
+      </ul>
+      <p>¡Comer bien también es cuidar el medio ambiente!</p>
+    </section>
+
+    <section class="content-section">
+      <h2>Comparte tus Ideas para una Alimentación Sustentable</h2>
+      <p>¿Cómo crees que podemos comer mejor y generar menos basura en el COBACH 20?</p>
+      <p>Llena el formulario de abajo con tus propuestas. Juntos construiremos un plantel más sano y sostenible.</p>
+    </section>
+
+    <!-- Formulario -->
+    <section id="feedback-form" class="content-section">
+      <h2>Formulario de Propuestas</h2>
+      <form id="feedbackForm">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" required />
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" required />
+
+        <label for="propuesta">Propuesta / Comentario:</label>
+        <textarea id="propuesta" rows="5" required></textarea>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 COBACH 20 - Proyecto de Alimentación Sustentable</p>
+  </footer>
+
+  <script>
+    // Obtener los botones y el contenedor para mostrar info
+    const pawButtons = document.querySelectorAll('.paw-button');
+    const infoDisplay = document.getElementById('infoDisplay');
+    const feedbackForm = document.getElementById('feedbackForm');
+
+    // Contenido para cada sección
+    const buttonContent = {
+      recetas: `
+        <h3>Recetas Saludables para Alumnos</h3>
+        <ul>
+          <li><strong>Ensalada de frutas:</strong> mezcla manzana, plátano, naranja y fresas con un poco de jugo de limón.</li>
+          <li><strong>Barras de avena caseras:</strong> avena, miel, frutos secos y pasas horneadas ligeramente.</li>
+          <li><strong>Sándwich integral:</strong> pan integral con pollo, lechuga, jitomate y aguacate.</li>
+          <li><strong>Palomitas naturales:</strong> hechas en casa sin mantequilla ni sal extra.</li>
+          <li><strong>Yogur con frutas:</strong> yogur natural con trozos de fruta fresca.</li>
+        </ul>
+      `,
+      impacto: `
+        <h3>Importancia e Impacto de una Alimentación Saludable</h3>
+        <p>Cambiar nuestra alimentación tiene efectos positivos en nuestro desarrollo físico y mental:</p>
+        <ul>
+          <li>Mejora la concentración y el rendimiento académico.</li>
+          <li>Fortalece el sistema inmunológico, ayudándonos a evitar enfermedades.</li>
+          <li>Contribuye al crecimiento saludable y adecuado.</li>
+          <li>Reduce el riesgo de enfermedades crónicas a largo plazo.</li>
+          <li>Promueve hábitos sostenibles y cuida el medio ambiente.</li>
+        </ul>
+      `,
+      opciones: `
+        <h3>Opciones de Cambio en el Plantel</h3>
+        <ul>
+          <li>Ofrecer frutas y snacks saludables en la cafetería.</li>
+          <li>Instalar bebederos con agua potable para reducir el uso de botellas plásticas.</li>
+          <li>Fomentar el uso de loncheras reutilizables y evitar empaques desechables.</li>
+          <li>Organizar talleres y ferias sobre alimentación saludable.</li>
+          <li>Incentivar el cultivo en huertos escolares para proveer alimentos frescos.</li>
+        </ul>
+      `
+    };
+
+    // Agregar evento a cada botón para mostrar la información correspondiente
+    pawButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const key = button.dataset.info;
+        if (buttonContent[key]) {
+          infoDisplay.innerHTML = buttonContent[key];
+          infoDisplay.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        } else {
+          infoDisplay.innerHTML = '<p>No hay información disponible para esta sección.</p>';
+        }
+      });
+    });
+
+    // Manejo del envío del formulario (solo para demo)
+    feedbackForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+
+      const nombre = document.getElementById('nombre').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const propuesta = document.getElementById('propuesta').value.trim();
+
+      if (nombre && email && propuesta) {
+        console.log('Formulario Enviado:');
+        console.log('Nombre:', nombre);
+        console.log('Email:', email);
+        console.log('Propuesta/Comentario:', propuesta);
+
+        alert('¡Gracias por tu propuesta/comentario! Lo hemos recibido.');
+        feedbackForm.reset();
+      } else {
+        alert('Por favor llena todos los campos antes de enviar.');
+      }
+    });
+  </script>
+</body>
+</html>
